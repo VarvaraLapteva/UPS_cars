@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -16,6 +17,7 @@ def prepare_data(data_file_name, test_size):
     # Данные распределения по целевому признаку: вывести таблицу и гистограмму
     print(df["car"].value_counts())
     df["car"].value_counts().plot(kind="bar")
+    plt.show()
 
     # конвертируем приемлемость автомобиля в числовое значение в соответствии со
     # словарём car_acc_dict: чем больше машина подходит, тем больше числовое значение
